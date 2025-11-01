@@ -1,0 +1,63 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --christmas-red: #C41E3A;
+  --christmas-green: #0F7B3D;
+  --christmas-gold: #FFD700;
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+  
+  body {
+    @apply bg-white text-gray-900;
+  }
+}
+
+@layer components {
+  /* Botão CTA principal */
+  .btn-cta {
+    @apply bg-christmas-red hover:bg-christmas-darkred text-white font-bold 
+           py-4 px-8 rounded-full text-lg shadow-2xl 
+           transition-all duration-300 transform hover:scale-105 
+           active:scale-95 focus:ring-4 focus:ring-christmas-gold;
+  }
+
+  /* Badge de urgência */
+  .badge-urgency {
+    @apply inline-flex items-center px-3 py-1 rounded-full text-sm font-semibold
+           bg-red-100 text-red-800 animate-pulse-slow;
+  }
+
+  /* Card de depoimento */
+  .testimonial-card {
+    @apply bg-white rounded-2xl shadow-xl p-6 border-2 border-gray-100
+           hover:shadow-2xl transition-shadow duration-300;
+  }
+
+  /* Seção com gradiente natalino */
+  .christmas-gradient {
+    @apply bg-gradient-to-br from-christmas-red via-red-600 to-christmas-darkred;
+  }
+
+  /* Input estilizado */
+  .input-christmas {
+    @apply w-full px-4 py-3 rounded-lg border-2 border-gray-300
+           focus:border-christmas-red focus:ring-2 focus:ring-christmas-gold
+           transition-all duration-200 outline-none;
+  }
+}
+
+@layer utilities {
+  .text-shadow {
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+  }
+
+  .glow-gold {
+    box-shadow: 0 0 20px rgba(255, 215, 0, 0.6);
+  }
+}
